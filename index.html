@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoTotal | Tecnología y Seguridad para tu Negocio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ PRELOADER PREMIUM ══ -->
+<div id="loader">
+    <div class="ldr-center">
+        <div class="ldr-logo">TecnoTotal</div>
+        <div class="ldr-ring">
+            <svg viewBox="0 0 56 56" width="56" height="56">
+                <circle cx="28" cy="28" r="23" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+                <circle cx="28" cy="28" r="23" fill="none" stroke="#E8571A" stroke-width="1.5"
+                        stroke-dasharray="144.5" stroke-dashoffset="144.5"
+                        id="loaderArc" stroke-linecap="round"
+                        style="transform-origin:center;transform:rotate(-90deg)"/>
+            </svg>
+        </div>
+        <div class="ldr-pct" id="loaderPct">0%</div>
+    </div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- SCROLL LINE -->
+<div id="scroll-line"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#hero" class="logo">
+            <div class="logo-mark">
+                <span></span><span></span>
+                <span></span><span></span>
+            </div>
+            <span class="logo-name">TecnoTotal</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#contacto" class="btn-nav magnetic">Cotizar Proyecto</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="btn-nav">Cotizar Proyecto</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     HERO — CENTRADO
+══════════════════════════════════════ -->
+<section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-glow"></div>
+
+    <div class="hero-center">
+        <div class="hero-badge" id="heroBadge">
+            <span class="hb-dot"></span>
+            Tecnología & Seguridad para tu negocio
+        </div>
+
+        <h1 class="hero-h1">
+            <span class="hero-line"><span class="hw">Expertos en</span></span>
+            <span class="hero-line hero-line-accent">
+                <span class="ht-typed" id="htCycle"></span><span class="ht-cur">|</span>
+            </span>
+            <span class="hero-line"><span class="hw">para tu negocio.</span></span>
+        </h1>
+
+        <!-- Typewriter cíclico -->
+        <div class="hero-tw" id="heroTw">
+            <span class="tw-prefix">Instalamos</span>
+            <span class="tw-word" id="twWord"></span>
+            <span class="tw-cursor" id="twCursor">|</span>
+        </div>
+
+        <p class="hero-sub" id="heroSub">
+            Instalamos, reparamos y mantenemos todo lo que tu negocio necesita:<br>
+            cámaras, redes, cómputo, energía solar y mucho más.
+        </p>
+
+        <div class="hero-ctas" id="heroCtas">
+            <a href="#contacto" class="btn-primary magnetic">
+                Solicitar Cotización
+                <span class="btn-arrow-icon"><i data-lucide="arrow-right" size="16"></i></span>
+            </a>
+            <a href="#servicios" class="btn-outline">Ver servicios</a>
+        </div>
+
+        <div class="hero-stats" id="heroStats">
+            <div class="hs-item">
+                <span class="hs-num">99.9%</span>
+                <span class="hs-label">Disponibilidad</span>
+            </div>
+            <span class="hs-div"></span>
+            <div class="hs-item">
+                <span class="hs-num">+500</span>
+                <span class="hs-label">Clientes atendidos</span>
+            </div>
+            <span class="hs-div"></span>
+            <div class="hs-item">
+                <span class="hs-num">24/7</span>
+                <span class="hs-label">Soporte disponible</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <div class="hsh-mouse"><div class="hsh-wheel"></div></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+    <div class="marquee-inner">
+        <span><i data-lucide="shield-check" size="13"></i> Cámaras de Seguridad</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="bell" size="13"></i> Alarmas</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="wifi" size="13"></i> Redes</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="sun" size="13"></i> Celdas Solares</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="lock" size="13"></i> Control de Acceso</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="monitor" size="13"></i> Cómputo</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="printer" size="13"></i> Impresoras</span>
+        <span class="msep">◆</span>
+        <!-- dup -->
+        <span><i data-lucide="shield-check" size="13"></i> Cámaras de Seguridad</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="bell" size="13"></i> Alarmas</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="wifi" size="13"></i> Redes</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="sun" size="13"></i> Celdas Solares</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="lock" size="13"></i> Control de Acceso</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="monitor" size="13"></i> Cómputo</span>
+        <span class="msep">◆</span>
+        <span><i data-lucide="printer" size="13"></i> Impresoras</span>
+        <span class="msep">◆</span>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SERVICIOS — CON FOTOS
+══════════════════════════════════════ -->
+<section class="services-section" id="servicios">
+    <div class="sec-wrap">
+
+        <div class="sec-label">
+            <span class="sl-n">01</span>
+            <span class="sl-line"></span>
+            <span>NUESTROS SERVICIOS</span>
+        </div>
+
+        <div class="sec-head-row">
+            <h2 class="sec-title reveal-up">Todo lo que tu negocio<br>necesita en tecnología</h2>
+            <p class="sec-sub reveal-up" style="--d:.08s">Instalación, mantenimiento y soporte técnico para empresas y hogares.</p>
+        </div>
+
+        <!-- BENTO GRID con fotos -->
+        <div class="cards-grid">
+
+            <!-- SEGURIDAD — big -->
+            <div class="svc-card card-big reveal-up" style="--d:0s">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=900&h=700" alt="Cámaras de seguridad" class="card-img" loading="lazy">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="card-n">01</span>
+                    <h3 class="card-title">Cámaras de Seguridad<br>y Alarmas</h3>
+                    <p class="card-desc">Instalación de cámaras IP/HD, alarmas inteligentes y control de acceso peatonal y vehicular.</p>
+                    <a href="#contacto" class="card-cta">Cotizar <i data-lucide="arrow-right" size="14"></i></a>
+                </div>
+            </div>
+
+            <!-- REDES — small -->
+            <div class="svc-card card-sm reveal-up" style="--d:.1s">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=700&h=500" alt="Redes e internet" class="card-img" loading="lazy">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="card-n">02</span>
+                    <h3 class="card-title">Redes e<br>Internet</h3>
+                    <p class="card-desc">Cableado estructurado, routers, switches y WiFi de alta cobertura.</p>
+                    <a href="#contacto" class="card-cta">Cotizar <i data-lucide="arrow-right" size="14"></i></a>
+                </div>
+            </div>
+
+            <!-- SOLAR — small -->
+            <div class="svc-card card-sm reveal-up" style="--d:.18s">
+                <img src="panel_solar.jpg" alt="Celdas solares" class="card-img" loading="lazy">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <span class="card-n">03</span>
+                    <h3 class="card-title">Celdas<br>Solares</h3>
+                    <p class="card-desc">Ahorra en tu recibo de luz con paneles solares certificados e instalación incluida.</p>
+                    <a href="#contacto" class="card-cta card-cta-orange">Cotizar <i data-lucide="arrow-right" size="14"></i></a>
+                </div>
+            </div>
+
+            <!-- CÓMPUTO — wide -->
+            <div class="svc-card card-wide reveal-up" style="--d:.26s">
+                <img src="reparacion.jpg" alt="Soporte IT y reparación" class="card-img" loading="lazy">
+                <div class="card-overlay card-overlay-horizontal"></div>
+                <div class="card-content card-content-wide">
+                    <div>
+                        <span class="card-n">04</span>
+                        <h3 class="card-title">Reparación de Equipos<br>e Impresoras</h3>
+                        <p class="card-desc">Mantenimiento y reparación de computadoras, laptops, impresoras y servidores. Tu equipo siempre en óptimas condiciones.</p>
+                    </div>
+                    <a href="#contacto" class="card-cta">Cotizar <i data-lucide="arrow-right" size="14"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     STATS
+══════════════════════════════════════ -->
+<section class="stats-section" id="nosotros">
+    <div class="sec-wrap">
+
+        <div class="sec-label">
+            <span class="sl-n">02</span>
+            <span class="sl-line"></span>
+            <span>RESULTADOS</span>
+        </div>
+
+        <h2 class="sec-title reveal-up">Números que hablan<br>por sí solos</h2>
+
+        <div class="stats-row">
+            <div class="stat-item reveal-up" style="--d:0s">
+                <span class="stat-num" data-target="99.9" data-suffix="%">0%</span>
+                <div class="stat-bar-wrap"><div class="stat-bar" data-w="99.9"></div></div>
+                <span class="stat-lbl">Disponibilidad</span>
+                <span class="stat-sub">Servicio confiable y continuo</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat-item reveal-up" style="--d:.1s">
+                <span class="stat-num" data-target="500" data-prefix="+">0</span>
+                <div class="stat-bar-wrap"><div class="stat-bar sb-orange" data-w="100"></div></div>
+                <span class="stat-lbl">Clientes atendidos</span>
+                <span class="stat-sub">Empresas y hogares satisfechos</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat-item reveal-up" style="--d:.2s">
+                <span class="stat-num" data-target="24" data-suffix="/7">0</span>
+                <div class="stat-bar-wrap"><div class="stat-bar sb-teal" data-w="100"></div></div>
+                <span class="stat-lbl">Soporte disponible</span>
+                <span class="stat-sub">Siempre cuando nos necesitas</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACTO
+══════════════════════════════════════ -->
+<section class="contact-section" id="contacto">
+    <div class="sec-wrap">
+
+        <div class="sec-label">
+            <span class="sl-n">03</span>
+            <span class="sl-line"></span>
+            <span>CONTACTO</span>
+        </div>
+
+        <div class="contact-layout">
+
+            <div class="contact-info reveal-up">
+                <h2 class="contact-title">Hablemos de lo<br>que <em>necesitas</em></h2>
+                <p class="contact-desc">Cuéntanos qué necesitas y te respondemos en minutos por WhatsApp.</p>
+
+                <div class="perks">
+                    <div class="perk">
+                        <div class="perk-icon pi-orange"><i data-lucide="zap" size="16"></i></div>
+                        <div>
+                            <strong>Respuesta rápida</strong>
+                            <span>Te contactamos en minutos</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="perk-icon pi-blue"><i data-lucide="shield-check" size="16"></i></div>
+                        <div>
+                            <strong>Diagnóstico gratis</strong>
+                            <span>Revisamos tu caso sin costo</span>
+                        </div>
+                    </div>
+                    <div class="perk">
+                        <div class="perk-icon pi-teal"><i data-lucide="wrench" size="16"></i></div>
+                        <div>
+                            <strong>Técnicos especializados</strong>
+                            <span>Con experiencia comprobada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap reveal-up" style="--d:.12s">
+                <form id="waForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Tu nombre</label>
+                            <input type="text" id="nombre" placeholder="Nombre completo" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" placeholder="Opcional" autocomplete="organization">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio">¿Qué necesitas?</label>
+                        <div class="select-wrap">
+                            <select id="servicio" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option>Cámaras de Seguridad</option>
+                                <option>Alarmas</option>
+                                <option>Control de Acceso</option>
+                                <option>Redes e Internet</option>
+                                <option>Reparación de Cómputo</option>
+                                <option>Reparación de Impresoras</option>
+                                <option>Celdas Solares</option>
+                                <option>Varios servicios</option>
+                            </select>
+                            <i data-lucide="chevron-down" size="15" class="sel-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntanos más</label>
+                        <textarea id="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit magnetic" id="submitBtn">
+                        <span class="bst-normal"><i data-lucide="message-circle" size="16"></i> Enviar por WhatsApp</span>
+                        <span class="bst-loading" style="display:none"><span class="spin-sm"></span> Enviando...</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="logo">
+                <div class="logo-mark lm-sm"><span></span><span></span><span></span><span></span></div>
+                <span class="logo-name">TecnoTotal</span>
+            </div>
+            <p>Tecnología para tu negocio</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <p class="footer-copy">&copy; 2024 TecnoTotal. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- FAB -->
+<a href="#" id="fabWa" class="fab-wa" aria-label="WhatsApp">
+    <i data-lucide="message-circle" size="26"></i>
+    <span class="fab-pulse"></span>
+</a>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
