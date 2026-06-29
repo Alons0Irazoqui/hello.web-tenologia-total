@@ -163,8 +163,7 @@ function initHeroCanvas() {
             ctx.arc(d.x, d.y, size, 0, Math.PI * 2);
 
             if (prox > 0.04) {
-                /* Glow naranja (color de marca) cerca del cursor */
-                ctx.fillStyle = `rgba(232, 100, 30, ${opacity})`;
+                ctx.fillStyle = `rgba(21, 101, 192, ${opacity})`;
             } else {
                 ctx.fillStyle = `rgba(70, 72, 90, ${opacity})`;
             }
